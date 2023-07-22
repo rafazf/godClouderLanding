@@ -1,0 +1,6 @@
+.container-main{
+    background-image: url('../../../assets/img/IMG.png');
+    background-size: contain; /* Opcional: ajustar el tamaño de la imagen al tamaño del div */
+    background-repeat: no-repeat; /* Opcional: evitar que la imagen se repita */
+    height: 100%;
+}
