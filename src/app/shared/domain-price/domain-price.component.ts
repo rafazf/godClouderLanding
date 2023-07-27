@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./domain-price.component.css']
 })
 export class DomainPriceComponent {
+  isMonthly: boolean = true; // Por defecto, asumimos que está seleccionado "Mensual"
 
-
+  togglePlanPrice(event: Event): void {
+    this.isMonthly = (event.target as HTMLInputElement).checked;
+  }
 }

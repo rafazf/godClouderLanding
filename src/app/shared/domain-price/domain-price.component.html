@@ -1,62 +1,101 @@
-<div class="container mt-5 text-center">
-  <h1>Oferta especial para su sitio web</h1>
+<div class="container mt-5 ">
+  <h1 class="d-flex justify-content-center">Oferta especial para su sitio web</h1>
   <div class="d-flex justify-content-center align-items-center mt-3">
-    <span class="mr-3 mt-2">Mensual</span>
+    <span class="mr-3 mt-2">Anual</span>
     <div class="custom-control custom-switch mt-2">
-      <input type="checkbox" class="custom-control-input" id="switchPlan" onclick="togglePlanPrice()">
+      <input type="checkbox" class="custom-control-input" id="switchPlan" (change)="togglePlanPrice($event)">
       <label class="custom-control-label" for="switchPlan"></label>
     </div>
-    <span class="ml-3 mt-2">Anual</span>
+    <span class="ml-3 mt-2">Mensual</span>
   </div>
   <div class="row mt-5">
     <div class="col-md-4">
       <div class="card">
-        <div class="card-body text-center">
-          <h3>De Primera Calidad</h3>
+        <div class="card-body ">
+          <div class="text-center">
+          <h3>Básico </h3>
+          <p>¡Crea tu sitio web con todo lo que necesitas</p>
           <!-- Agrega el id "price1" para el precio del primer plan -->
-          <h4 id="price1" style="color: #F49A24;">$9.99/MES</h4>
-          <p>Rendimiento estándar</p>
-          <p>Almacenamiento SSD de 30 GB</p>
-          <p>Copias de seguridad semanales</p>
-          <p>Correos electrónicos 10</p>
-          <p>SSL ($3)</p>
-          <p>Dominio .com ($5.90)</p>
-          <p>Dirección IP dedicada</p>
+            <h1 id="price1" style="color: #F49A24;">{{ isMonthly ? '$3.06/MES' : '$36.20/AÑO' }}</h1>
+          </div>
+          <div class="text-left">
+            <p>
+              <i class="fa fa-check text-success mr-2"></i> Almacenamiento SSD de 60 GB
+            </p>
+            <p>
+              <i class="fa fa-check text-success mr-2"></i> Certificado SSL (Gratis)
+            </p>
+            <p>
+              <i class="fa fa-check text-success mr-2"></i> Cuentas de correo (50)
+            </p>
+            <p>
+              <i class="fa fa-check text-success mr-2"></i> 5 Base de datos
+            </p>
+            <p>
+              <i class="fa fa-check text-success mr-2"></i> Soporte 24/7
+            </p>
+            <p>
+              <i class="fa fa-check text-success mr-2"></i> Parkeo de dominio limitado
+            </p>
+            <p>
+              <i class="fa fa-check text-success mr-2"></i> Amigable con Google
+            </p>
+          </div>
+
+          <div class="text-center">
           <button class="btn btn-primary px-4 py-2">Añadir Carrito</button>
+        </div>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card">
-        <div class="card-body text-center">
-          <h3>De Primera Calidad</h3>
+        <div class="card-body ">
+          <div class="text-center">
+          <h3>Emprendedor</h3>
+            <p>Potencia y sube el nivel con funciones
+              mejoradas.</p>
           <!-- Agrega el id "price2" para el precio del segundo plan -->
-          <h4 id="price2" style="color: #005CFE;">$9.99/MES</h4>
-          <p>Rendimiento estándar</p>
-          <p>Almacenamiento SSD de 30 GB</p>
-          <p>Copias de seguridad semanales</p>
-          <p>Correos electrónicos 10</p>
-          <p>SSL ($3)</p>
-          <p>Dominio .com ($5.90)</p>
-          <p>Dirección IP dedicada</p>
+          <h1 id="price2" style="color: #005CFE;"> {{ isMonthly ? '$4.17/MES' : '$50/AÑO' }}</h1>
+          </div>
+          <div class="text-left">
+            <p><i class="fa fa-check text-success mr-2"></i> Almacenamiento SSD de 120 GB</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Certificado SSL (Gratis)</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Cuentas de correo (100)</p>
+            <p><i class="fa fa-check text-success mr-2"></i> 8 Base de datos</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Soporte 24/7</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Parkeo de dominio ilimitado</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Amigable con Google</p>
+          </div>
+
+          <div class="text-center">
           <button class="btn btn-c btn-primary px-4 py-2">Añadir Carrito</button>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card">
-        <div class="card-body text-center">
-          <h3>De Primera Calidad</h3>
-          <!-- Agrega el id "price3" para el precio del tercer plan -->
-          <h4 id="price3" style="color: #F49A24;">$9.99/MES</h4>
-          <p>Rendimiento estándar</p>
-          <p>Almacenamiento SSD de 30 GB</p>
-          <p>Copias de seguridad semanales</p>
-          <p>Correos electrónicos 10</p>
-          <p>SSL ($3)</p>
-          <p>Dominio .com ($5.90)</p>
-          <p>Dirección IP dedicada</p>
+        <div class="card-body">
+          <div class="text-center">
+          <h3>Empresa</h3>
+          <p>Experimenta el rendimiento optimizado y
+            recursos dedicados.</p>
+            <h1 id="price3" style="color: #F49A24;">{{ isMonthly ? '$5.84/MES' : '$70/AÑO' }}</h1>
+          </div>
+          <div class="text-left">
+            <p><i class="fa fa-check text-success mr-2"></i> Almacenamiento SSD de 200 GB</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Certificado SSL (Gratis)</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Cuentas de correo ilimitados</p>
+            <p><i class="fa fa-check text-success mr-2"></i> 30 Base de datos</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Soporte 24/7</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Parkeo de dominio ilimitado</p>
+            <p><i class="fa fa-check text-success mr-2"></i> Amigable con Google</p>
+          </div>
+
+          <div class="text-center">
           <button class="btn btn-primary px-4 py-2">Añadir Carrito</button>
+        </div>
         </div>
       </div>
     </div>
