@@ -1,5 +1,14 @@
+.div-img-center {
+  height: 320px;
+  border-radius: 16px;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .custom-img {
   width: 80%;
-  border-radius: 16px;
-  height: 320px;
+  height: 75%;
+  background: none;
 }

@@ -5,6 +5,9 @@
   background-repeat: no-repeat;
   height: 100vh;
 }
+
+
+
 .card{border-radius: .5rem;}
 @media screen and (max-width:800px){
   .container-main{
